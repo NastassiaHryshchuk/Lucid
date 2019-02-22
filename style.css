@@ -187,7 +187,7 @@ button + button  {
 
 h2 {
     margin: 0;
-    padding: 55px 0 0 0;
+    padding: 0;
 
     font-size: 36px;
     line-height: 48px;
@@ -200,7 +200,6 @@ h2 span {
     display: block;
 
     font-size: 14px;
-    line-height: 49px;
     font-weight: 700;
     color: #008ed6;
     text-transform: uppercase;
@@ -220,6 +219,31 @@ h2 span {
     text-align: center;
 }
 
+.features-list-item-circle {
+    margin: 0 auto 30px auto;
+
+    width: 87px;
+    height: 87px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+}
+
+.features-list-item-monitor {
+    background: transparent url(Monitor.svg) center center no-repeat;
+}
+
+.features-list-item-settings {
+    background: transparent url(Settings.svg) center center no-repeat;
+}
+
+.features-list-item-like {
+    background: transparent url(Like.svg) center center no-repeat;
+}
+
+.features-list-item-phone {
+    background: transparent url(Phone.svg) center center no-repeat;
+}
+
 .features-list li h3 {
     font-size: 24px;
     font-weight: 400;
@@ -234,6 +258,7 @@ h2 span {
 }
 
 #features {
+    padding: 55px 0; 
     background-color: #fff;
     border-bottom: 1px solid #ededed;
 }
@@ -271,8 +296,6 @@ h2 span {
     padding-right: 83px;
 }
 
-
-
 .about-customize-img {
     flex-basis: 60%;
 }
@@ -295,16 +318,34 @@ h2 span {
 }
 
 .about-beautiful-list {
-    padding: 0;
+    padding: 33px 0 0 0;
     margin: 0;
     list-style: none;
 }
 
 .about-beautiful-list li {
+    padding: 0 0 0 30px;
+
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
     color: #1b1b1b;
+}
+
+.about-beautiful-list-item-cup {
+    background: transparent url(Cup.svg) 0 50% no-repeat;
+}
+
+.about-beautiful-list-item-mouse {
+    background: transparent url(Mouse.svg) 0 50% no-repeat;
+}
+
+.about-beautiful-list-item-energy {
+    background: transparent url(Energy.svg) 0 50% no-repeat;
+}
+
+.about-beautiful-list-item-speedometer {
+    background: transparent url(Speedometer.svg) 0 50% no-repeat;
 }
 
 #about hr {
@@ -316,8 +357,10 @@ h2 span {
 /* testimonials */
 /* ------------------- */
 
-#testimonials{
-    background-color: #ccc;
+.testimonials-background-wrapper {
+    padding: 53px 0;
+    background: #40392D url(Warstwa_8.png) center no-repeat;
+    background-size: cover;  
 }
 
 #testimonials hr {
@@ -332,15 +375,20 @@ blockquote {
     color: #ffffff;
 }
 
-cite span {
+cite {
+    display: flex;
+    align-items: center;
+    font-style: normal;
+}
+
+cite .name {
     font-size: 16px;
-    line-height: 42px;
     font-weight: 400;
     text-transform: capitalize;
     color: #ffffff;
 }
 
-cite {
+cite .job {
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
@@ -354,15 +402,32 @@ cite {
     margin: 0;
     list-style: none;
 
+    display: flex;
     /*delete word spacing between inline-blocks*/
-    font-size: 0;
+    /* font-size: 0; */
 }
 
 .testimonials-list li {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
-    padding: 0 37px 0 0;
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 293px;
+}
+
+.testimonials-list li:nth-child(odd) {
+    padding-right: 10px;
+}
+
+.testimonials-list li:nth-child(even) {
+    padding-left: 10px;
+}
+
+.testimonials-list img {
+    margin-right: 20px;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
 }
 
 .testimonials-block {
@@ -393,6 +458,277 @@ cite {
 /* pricing */
 /* ------------------- */
 
-#pricing{
+#pricing {
+    padding: 57px 0;
     background-color: #fff;
+}
+
+#pricing  hr {
+    margin: 33px auto 68px auto;
+}
+
+.pricing-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-list li {
+    max-width: 273px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+/* hover */
+.pricing-list li:hover h3 {
+    color: #008ed6;
+}
+
+.pricing-list li:hover .price {
+    background-color: #008ed6; 
+}
+
+.pricing-list li:hover .price .price-number,
+.pricing-list li:hover .price .price-number sup,
+.pricing-list li:hover .price-duration {
+    color: #fff;
+}
+
+.pricing-list li:hover .price-content a {
+    color: #fff;
+    background-color: #008ed6;
+}
+
+/* end hover */
+
+.pricing-list li h3 {
+    min-height: 71px;
+    line-height: 71px;
+
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-list li .price {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 149px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.pricing-list li .price .price-number {
+    font-size: 48px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+
+.pricing-list li .price .price-number sup {
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.pricing-list li .price-duration {
+    font-size: 18px;
+    color: #999999;
+    font-weight: 400;
+}
+
+.pricing-list li .price-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 315px;
+    padding: 41px 31px;
+}
+
+.pricing-list li .price-content p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #999999;
+    font-weight: 400;
+}
+
+.pricing-list li .price-content a {
+    font-size: 18px;
+    color: #008ed6;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 17px 37px;
+    cursor: pointer;
+
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+
+/* ------------------- */
+/* contact us */
+/* ------------------- */
+
+#contact-us {
+    position: relative;
+    background-color: #ededed;
+}
+
+#contact-us hr {
+    margin: 33px auto 68px auto;
+}
+
+.contact-us-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 0;
+    margin: 0 0 300px 0;;
+    list-style: none;
+}
+
+.contact-us-list li {
+    text-align: center;
+}
+
+.contact-us-list li span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #999999;
+}
+
+.contact-us-list-item-phone,
+.contact-us-list-item-pointer,
+.contact-us-list-item-envelop {
+    margin: 0 auto;
+    width: 87px;
+    height: 87px;
+}
+
+
+.contact-us-list-item-phone {
+    background: transparent url(Phone.svg) center center no-repeat;
+}
+
+.contact-us-list-item-pointer {
+    background: transparent url(Pointer.svg) center center no-repeat;
+}
+
+.contact-us-list-item-envelop {
+    background: transparent url(Envelope.svg) center center no-repeat;
+}
+
+form {
+    position: absolute;
+    bottom: 277px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    width: 50%;
+    padding: 59px 89px 37px;
+    background-color: #15141a;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    padding: 19px 15px;
+    background-color: #15141a;
+    border: 1px solid #444348;
+    border-radius: 3px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #444348;
+}
+
+.form-inputs {
+    display: flex;
+    width: 100%;
+    min-height: 187px;
+    margin-bottom: 19px;
+}
+
+.form-inputs-left {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex-basis: 50%;
+    padding-right: 10px;
+}
+
+.form-inputs-left input {
+    min-height: 51px;
+}
+
+.form-inputs-right {
+    flex-basis: 50%;
+    padding-left: 10px;
+}
+
+.form-inputs-right textarea {
+    width: 100%;
+    height: 100%;
+}
+
+button[type="submit"] {
+    float: right;
+    min-height: 47px;
+    line-height: 47px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #008ed6;
+    border: none;
+    cursor:pointer;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .form-img {
+      width: 100%;
+      min-height: 367px;
+
+      background-color: red;
+  }
+
+  /* ------------------- */
+/* footer */
+/* ------------------- */
+footer {
+    background-color: #000
+}
+
+.social-links {
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer span {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #444348;
 }
