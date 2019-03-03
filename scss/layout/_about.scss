@@ -1,0 +1,88 @@
+#about {
+  h2 {
+    text-align: left;
+    
+    &::after {
+      text-align: left;
+      padding-top: 0.5rem;
+    }
+  }
+
+  p {
+    padding-top: 0.9rem;
+  }
+}
+
+.about-beautiful {
+  padding: 4.2rem 0 1rem 0;
+  background-color: $background-light;
+
+  &-flex {
+    display: flex;
+  }
+
+  &-img {
+    flex-basis: 50%;
+    padding-left: 2%;
+  }
+
+  &-content {
+    flex-basis: 50%;
+    padding: 3rem 5.2rem 0 0.875rem;
+  }
+
+  ul {
+    padding-top: 1.8rem;
+
+    li {
+      @include font(1.125rem, $gray-darkest, 400, 2);
+    }
+
+    %list-item {
+      content: "";
+      display : inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
+    }
+
+    .cup::before {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Cup.svg) 50% 0 no-repeat;
+    }
+
+    .mouse::before {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Mouse.svg) 50% 0  no-repeat;
+    }
+
+    .energy::before {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Energy.svg) 50% 0 no-repeat;
+    }
+
+    .speedometer::before {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Speedometer.svg) 50% 0 no-repeat;
+    }
+  }
+}
+
+.about-customize {
+  padding: 2rem 0 1rem 0;
+  background-color: #f2f2f2;
+
+  &-flex {
+    display: flex;
+  }
+
+  &-img {
+    flex-basis: 50%;
+  }
+
+  &-content {
+    flex-basis: 50%;
+    padding: 6rem 0;
+  }
+}

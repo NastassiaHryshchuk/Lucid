@@ -1,0 +1,69 @@
+#contact-us {
+  position: relative;
+  background-color: $background-middle;
+  padding: 4% 0 0 0;
+
+  h2::after {
+    padding-top: 0.6rem;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    margin: 2.5% 7.5% 30% 7.5%;
+
+    li {
+      min-width: 20%;
+      text-align: center;
+    }
+
+    %list-item {
+      margin: 0 auto;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .phone {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Phone.svg) center center no-repeat;
+    }
+
+    .pointer {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Pointer.svg) center center no-repeat;
+    }
+
+    .envelop {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Envelope.svg) center center no-repeat;
+    }
+  }
+}
+
+form {
+  position: absolute;
+  bottom: 19rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+button[type="submit"] {
+  float: right;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.form-img {
+    width: 100%;
+    min-height: 24.5rem;
+    background: $gray-dark url(images/wrappers/Warstwa_15.png) 50% 24% no-repeat;
+}

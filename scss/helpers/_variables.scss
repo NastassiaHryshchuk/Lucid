@@ -1,0 +1,35 @@
+$white: #ffffff;
+$blue: #008ed6;
+$transparent: transparent;
+$gray: #999999;
+$gray-light: #e0e0e0;
+$gray-dark: #40392D;
+$gray-darker: #1a1a1a;
+$gray-darkest: #1b1b1b;;
+$gray-middle: #ededed;
+$gray-deep: #15141a;
+$gray-form: #444348;
+
+// Brand color
+$brand-color: $blue;
+
+// Fonts
+$main-font: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$additional-font:'Quicksand', Helvetica, Arial, sans-serif;
+
+// Text colors
+$text-color: $gray;
+$header-color: $white;
+$sub-header-color: $gray-darker;
+$link-color: $white;
+
+// Backround and borders
+$background-dark: $gray-dark;
+$background-middle: $gray-middle;
+$background-light: $white;
+$border-color: $gray;
+$border-price: $gray-light;
+
+
+// Container
+$container-width: 1171px;

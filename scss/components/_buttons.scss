@@ -1,0 +1,18 @@
+button[type="submit"] {
+
+  border-radius: 3px;
+  border: 1px solid $brand-color;
+  background-color: $brand-color;
+
+  width: 10rem;
+  min-height: 3rem;
+  line-height: 3rem;
+
+  @include font(0.875rem, $white, 700);
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

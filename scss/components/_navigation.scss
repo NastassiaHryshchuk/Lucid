@@ -1,0 +1,55 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  min-height: 6.0625rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+
+  @include font(1.5rem, $header-color, 700, $font-family: $additional-font);
+  text-transform: uppercase;
+
+  span {
+    display: inline-block;
+    margin-left: 0.5625rem;
+
+    @include font(0.5625rem, $text-color, 400, 1.11);
+    text-align: left;
+  }
+}
+
+nav {
+  /* delete word spacing between inline-blocks */
+  font-size: 0;
+
+  li {
+    display: inline-block;
+  }
+
+  li+li {
+    margin-left: 1.45rem;
+  }
+
+  a {
+    position: relative;
+  
+    @include font(1rem, $link-color, 600);
+
+    &:hover::after {
+      position: absolute;
+      top: 1.75rem;
+      content: "";
+      display : block;
+      height: 2px;
+      width: 100%;
+      background-image: repeating-linear-gradient(to right, $brand-color 0%, $brand-color 46%, transparent 46%, transparent 54%,  $brand-color 54%, $brand-color 100%);
+    }
+  }
+}

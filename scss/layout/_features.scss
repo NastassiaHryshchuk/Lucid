@@ -1,0 +1,51 @@
+#features {
+  padding: 4.5% 0 2.8% 0;
+  background-color: $background-light;
+  border-bottom: 1px solid $gray-middle;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    margin-top: 4rem;
+    margin-bottom: 2.15rem;
+  
+    li {
+      max-width: 270px;
+      padding: 0 24px;
+      text-align: center;
+    }
+  
+    %list-item {
+      margin: 0 auto 2rem auto;
+    
+      width: 5.4rem;
+      height: 5.4rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 50%;
+    }
+  
+    .monitor {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Monitor.svg) center center no-repeat;
+    }
+  
+    .settings {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Settings.svg) center center no-repeat;
+    }
+  
+    .like {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Like.svg) center center no-repeat;
+    }
+  
+    .phone {
+      @extend %list-item;
+      background: $transparent url(images/svgs/Phone.svg) center center no-repeat;
+    }
+  }
+}
+
+

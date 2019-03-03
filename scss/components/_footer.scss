@@ -1,0 +1,22 @@
+.main-footer {
+  background-color: $gray-deep;
+  text-align: center;
+  padding: 4% 0 3% 0;
+
+  ul {
+    display: flex;
+    justify-content: center;
+  
+    margin-bottom: 1.25rem;
+
+    li+li {
+      margin-left: 2.1rem;
+    }
+  }
+
+  span {
+    @include font(0.875rem, $gray-form, 600);
+    text-transform: uppercase;
+  }
+}
+

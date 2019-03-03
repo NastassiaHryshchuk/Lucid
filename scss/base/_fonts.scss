@@ -1,0 +1,50 @@
+body {
+  font-family: $main-font;
+}
+
+h1 {
+  @include font(3rem, $header-color, 600, 1.0625);
+  margin: 0;
+
+  span {
+    display: block;
+    margin-bottom: 1.375rem;
+  
+    @include font(0.875rem, $brand-color, 700);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+}
+
+h2 {
+  @include font(2.25rem, $sub-header-color, 600);
+  text-align: center;
+
+  span {
+    display: block;
+    padding-bottom: 0.6rem;
+  
+    @include font(0.875rem, $brand-color, 700);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+
+  &::after {
+    content: "——";
+    display : block;
+    margin : 0 auto;
+    padding-top: 1.3rem;
+
+    @include font(1.7rem, $brand-color, 400);
+    text-align : center;
+  }
+}
+
+h3 {
+  @include font(1.5rem, $gray-darker, 400);
+  padding-bottom: 10px;
+}
+
+p {
+  @include font(1.125rem, $text-color, 400, 1.44);
+}

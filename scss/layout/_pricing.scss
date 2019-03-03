@@ -1,0 +1,95 @@
+#pricing {
+  padding: 4% 0;
+  background-color: $background-light;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 3.3rem;
+
+    li {
+      min-width: 17rem;
+      width: 24%;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+
+      h3 {
+        min-height: 4.3rem;
+        line-height: 4.3rem;
+        padding: 0;
+      
+        @include font(1.5rem, $gray-darker, 700);
+        text-transform: uppercase;
+        border-bottom: 1px solid $border-price;
+      }
+
+      .price {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 9.5rem;
+        border-bottom: 1px solid $border-price;
+
+        .price-number {
+          @include font(4rem, $gray-darker, 600);
+        }
+  
+        .price-number sup {
+          @include font(1.75rem, $gray-darker, 600);
+        }
+  
+        .price-duration {
+          @include font(1.1rem, $gray, 400);
+        }
+      }
+
+      .price-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        min-height: 17rem;
+        padding: 17% 15% 10% 15%;
+
+        a {
+          @include font(1.125rem, $brand-color, 600);
+          text-transform: uppercase;
+          padding: 14px 28px;
+        
+          border: 1px solid $border-price;
+          border-radius: 3px;
+          background-color: $transparent;
+        }
+      }
+
+      &:hover h3 {
+        color: $brand-color;
+      }
+
+      &:hover .price {
+        background-color: $brand-color; 
+      }
+
+      &:hover .price .price-number {
+        color: $white;
+      }
+
+      &:hover .price .price-number sup {
+        color: $white;
+      }
+
+      &:hover .price-duration {
+        color: $white;
+      }
+
+      &:hover .price-content a {
+        color: $white;
+        background-color: $brand-color;
+      }
+    }
+  }
+}

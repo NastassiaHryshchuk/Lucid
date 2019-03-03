@@ -1,0 +1,30 @@
+.link {
+  display: inline-block;
+  border-radius: 3px;
+  border: 1px solid $border-color;
+
+  width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+
+  @include font(0.875rem, $link-color, 700);
+  text-transform: uppercase;
+  text-align: center;
+
+  &[download] {
+    border: 1px solid $brand-color;
+    background-color: $brand-color;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.link + .link {
+  margin-left: 1.125rem;
+}

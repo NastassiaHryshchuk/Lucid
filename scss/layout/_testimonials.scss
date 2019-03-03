@@ -1,0 +1,87 @@
+#testimonials {
+  background-color: $gray-deep;
+
+  h2 {
+    color: $white;
+    &::after {
+      padding-top: 0.8rem;
+    }
+  }
+
+  ul {
+    display: flex;
+    margin-top: 4.5rem;
+
+    li {
+      display: flex;
+      flex-basis: 50%;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 50%;
+
+      &:nth-child(odd) {
+        padding-right: 0.625rem;
+      }
+
+      &:nth-child(even) {
+        padding-left: 0.625rem;
+      }
+    }
+
+    img {
+      margin-right: 1.8rem;
+      width: 59px;
+      height: 59px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.testimonials-background-wrapper {
+  padding: 4.2rem 0 2rem 0;
+  background: $gray-deep url(images/wrappers/Warstwa_8.png) 0% 14% no-repeat;
+  background-size: cover;  
+}
+
+blockquote p {
+  @include font(1.5rem, $white, 400, 1.33);
+  font-style: italic;
+}
+
+.quote {
+  display: flex;
+  align-items: center;
+
+  .name {
+    @include font(1rem, $white, 400);
+    font-style: normal;
+    text-transform: capitalize;
+  }
+
+  .job {
+    @include font(0.875rem, $white, 700, 1.86);
+    font-style: normal;
+    text-transform: uppercase;
+  }
+}
+
+.testimonials-block {
+  background-color: $gray-deep;
+
+  h3 {
+    margin-right: auto;
+    padding: 0;
+
+    @include font(2.25rem, $white, 300, 1.33);
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.testimonials-flex {
+  display: flex;
+  align-items: center;
+  min-height: 10.5rem;
+}

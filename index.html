@@ -9,10 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 </head>
 <body>
-    <header class="container header-flex">
-        <a class="logo" href="#home">Lucid<span class="logo-decor">Onepage<br/>theme</span></a>
+    <header class="main-header container">
+        <a class="logo" href="#home">Lucid<span>Onepage<br/>theme</span></a>
         <nav>
-            <ul class="header-navigation-list">
+            <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#about">About</a></li>
@@ -26,13 +26,13 @@
         <section id="home">
             <div class="home-background-wrapper">
                 <div class="container home-container">
-                <div class="home-content-wrapper">
-                    <h1><span>Introducing lucid theme</span>Carefully crafted and beautiful landing page.</h1>
-                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only.</p>
-                    <button type="button" bluebackground>Download now</button>
-                    <button type="button">View features</button>
-                </div>
-                <div class="home-img-wrapper"><img src="phonenew.png" alt="Phone"></div>
+                    <div class="home-content-wrapper">
+                        <h1><span>Introducing lucid theme</span>Carefully crafted and beautiful landing page.</h1>
+                        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only.</p>
+                        <a class="link" download href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/11907/His%20Girl%20Friday%20%7C%20Public%20Domain%20Movies.webloc">Download now</a>
+                        <a class="link" href="#features" role="button">View features</a>
+                    </div>
+                <div class="home-img-wrapper"><img src="images/phones/phonenew.png" alt="Two beautiful phones are near each other." width="505"></div>
                 </div>
             </div>
         </section>
@@ -40,24 +40,24 @@
         <section id="features">
             <div class="container" >
                 <h2><span>Product overview</span>List of amazing features</h2>
-                <ul class="features-list">
+                <ul>
                     <li>
-                        <div class="features-list-item-circle features-list-item-monitor"></div>
+                        <div class="monitor"></div>
                         <h3>Responsive</h3>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin.</p>
                     </li>
                     <li>
-                        <div class="features-list-item-circle features-list-item-settings"></div>
+                        <div class="settings"></div>
                         <h3>Customizable</h3>
                         <p>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more.</p>
                     </li>
                     <li>
-                        <div class="features-list-item-circle features-list-item-like"></div>
+                        <div class="like"></div>
                         <h3>Lovely design</h3>
                         <p>It is a long established fact that a reader will be distracted by the readable content of a page.</p>
                     </li>
                     <li>
-                        <div class="features-list-item-circle features-list-item-phone"></div>
+                        <div class="phone"></div>
                         <h3>Mobile-friendly</h3>
                         <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using.</p>
                     </li>
@@ -68,15 +68,15 @@
         <section id="about">
             <div class="about-beautiful">
                 <div class="container about-beautiful-flex">
-                    <div class="about-beautiful-img"><img src="phone1.png" alt="Phone" width="500"></div>
+                    <div class="about-beautiful-img"><img src="images/phones/phone1.png" alt="Two beautiful phones are near each other." width="510"></div>
                     <div class="about-beautiful-content">
                         <h2><span>Dip into the details</span>Beautiful on every device</h2>
                         <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions.</p>
-                        <ul class="about-beautiful-list">
-                            <li class="about-beautiful-list-item-cup">Awersome design</li>
-                            <li class="about-beautiful-list-item-mouse">Fully responsive</li>
-                            <li class="about-beautiful-list-item-energy">Retina ready</li>
-                            <li class="about-beautiful-list-item-speedometer">Tons of features and easy to use</li>
+                        <ul>
+                            <li class="cup">Awesome design</li>
+                            <li class="mouse">Fully responsive</li>
+                            <li class="energy">Retina ready</li>
+                            <li class="speedometer">Tons of features and easy to use</li>
                         </ul>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                         <h2><span>Dip into the details</span>Super easy to customize</h2>
                         <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose.</p>
                     </div>
-                    <div class="about-customize-img"><img src="phone2.png" alt="Phone" width="700"></div>
+                    <div class="about-customize-img"><img src="images/phones/phone2.png" alt="Beautiful phone are is lying on the table." width="710"></div>
                 </div>
             </div>
         </section>
@@ -95,48 +95,142 @@
         <section id="testimonials">
             <div class="testimonials-background-wrapper">
                 <div class="container">
-                    <h2><span>Quality has its price</span>Pricing &amp; Plans</h2>
-                    <ul class="testimonials-list">
-                        <li>
-                            <blockquote>
-                                <p>Check the SVG in a browser before adding it to your assets. This lets you ensure that you exported it right, and that the SVG.</p>
-                            </blockquote>
-                            <cite>
-                                <img src="new1.jpg" alt="User1">
-                                <div>
-                                    <span class="name">John Doe</span><br/>
-                                    <span class="job">CEO, The Rivers Company</span>
-                                </div>
-                            </cite>
-                        </li>
-                        <li>
-                            <blockquote>
-                                <p>The HTML blockquote>Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation.</p>
-                            </blockquote>
-                            <cite>
-                                <img src="new2.jpg" alt="User2">
-                                <div>
-                                    <span class="name">Dean Winchester</span><br/>
-                                    <span class="job">UX designer, Google inc.</span>
-                                </div>
-                            </cite>
-                        </li>
-                    </ul>
+                    <h2><span>Quality has its price</span>Pricings &amp; Plans</h2>
+                    <div class="slider">
+                        <input type="radio" name="slider" title="slide1" checked="checked" class="slider-nav"/>
+                        <input type="radio" name="slider" title="slide2" class="slider-nav"/>
+                        <input type="radio" name="slider" title="slide3" class="slider-nav"/>
+                        <input type="radio" name="slider" title="slide4" class="slider-nav"/>
+                        <div class="slider-inner">
+                            <div class="slider-contents">
+                                <ul>
+                                    <li>
+                                        <blockquote>
+                                            <p>Check the SVG in a browser before adding it to your assets. This lets you ensure that you exported it right, and that the SVG.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_1.jpg" alt="User avatar.">
+                                            <cite>
+                                                <span class="name">John Doe</span><br/>
+                                                <span class="job">CEO, The Rivers Company</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <blockquote>
+                                            <p>The HTML blockquote>Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_2.jpg" alt="Another user avatar.">
+                                            <cite>
+                                                <span class="name">Dean Winchester</span><br/>
+                                                <span class="job">UX designer, Google inc.</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slider-contents">
+                                <ul>
+                                    <li>
+                                        <blockquote>
+                                            <p>Check the SVG in a browser before adding it to your assets. This lets you ensure that you exported it right, and that the SVG.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_1.jpg" alt="User avatar.">
+                                            <cite>
+                                                <span class="name">John Doe</span><br/>
+                                                <span class="job">CEO, The Rivers Company</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <blockquote>
+                                            <p>The HTML blockquote>Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_2.jpg" alt="Another user avatar.">
+                                            <cite>
+                                                <span class="name">Dean Winchester</span><br/>
+                                                <span class="job">UX designer, Google inc.</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slider-contents">
+                                <ul>
+                                    <li>
+                                        <blockquote>
+                                            <p>Check the SVG in a browser before adding it to your assets. This lets you ensure that you exported it right, and that the SVG.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_1.jpg" alt="User avatar.">
+                                            <cite>
+                                                <span class="name">John Doe</span><br/>
+                                                <span class="job">CEO, The Rivers Company</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <blockquote>
+                                            <p>The HTML blockquote>Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_2.jpg" alt="Another user avatar.">
+                                            <cite>
+                                                <span class="name">Dean Winchester</span><br/>
+                                                <span class="job">UX designer, Google inc.</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slider-contents">
+                                <ul>
+                                    <li>
+                                        <blockquote>
+                                            <p>Check the SVG in a browser before adding it to your assets. This lets you ensure that you exported it right, and that the SVG.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_1.jpg" alt="User avatar.">
+                                            <cite>
+                                                <span class="name">John Doe</span><br/>
+                                                <span class="job">CEO, The Rivers Company</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <blockquote>
+                                            <p>The HTML blockquote>Element (or HTML Block Quotation Element) indicates that the enclosed text is an extended quotation.</p>
+                                        </blockquote>
+                                        <div class="quote">
+                                            <img src="images/users/user_2.jpg" alt="Another user avatar.">
+                                            <cite>
+                                                <span class="name">Dean Winchester</span><br/>
+                                                <span class="job">UX designer, Google inc.</span>
+                                            </cite>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="testimonials-block">
                 <div class="container testimonials-flex">
                     <h3><span>Like what you see?</span> Get this great theme now!</h3>
-                    <button type="button">View features</button>
-                    <button type="button" bluebackground>Download now</button>
+                    <a href="#features" role="button" class="link anchor-view-features">View features</a>
+                    <a download class="link" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/11907/His%20Girl%20Friday%20%7C%20Public%20Domain%20Movies.webloc">Download now</a>
                 </div>
             </div>
         </section>
 
         <section id="pricing">
             <div class="container">
-                <h2><span>Quality has its price</span>Pricing &amp; Plans</h2>
-                <ul class="pricing-list">
+                <h2><span>Quality has its price</span>Pricings &amp; Plans</h2>
+                <ul>
                     <li>
                         <h3>Free</h3>
                         <div class="price">
@@ -182,30 +276,31 @@
                         </div>
                     </li>
                 </ul>
+            </div>
         </section>
 
         <section id="contact-us">
-            <div class="container contact-us-container">
+            <div class="container">
                 <h2><span>Stay in touch</span>Contact us</h2>
-                <ul class="contact-us-list">
+                <ul>
                     <li>
-                        <div class="contact-us-list-item-phone"></div>
+                        <div class="phone"></div>
                         <p>Phone: (415) 124-5678<br />Fax: (412) 123-8290</p>
                     </li>
                     <li>
-                        <div class="contact-us-list-item-pointer"></div>
+                        <div class="pointer"></div>
                         <p>1001 Brickell Bay Dr.<br />Suite 1900<br />Miami, FL33131</p>
                     </li>
                     <li>
-                        <div class="contact-us-list-item-envelop"></div>
+                        <div class="envelop"></div>
                         <p>support@yourname.com</p>
                     </li>
                 </ul>
             </div>
-            <form action="" method="post" class="clearfix">
+            <form action="post" method="post" class="clearfix">
                 <div class="form-inputs">
                     <div class="form-inputs-left">
-                        <input type="text" name="name" autofocus required placeholder="NAME *">
+                        <input type="text" name="name" required placeholder="NAME *">
                         <input type="email" name="email" required placeholder="EMAIL *">
                         <input type="text" name="name" required placeholder="SUBJECT *">
                     </div>
@@ -218,15 +313,17 @@
             <div class="form-img"></div>
         </section>
     </main>
+
     <footer class="main-footer">
-        <ul class="social-links">
-            <li><a href=""><img src="footer/behance.png" alt="behance"></a></li>
-            <li><a href=""><img src="footer/dribbble.png" alt="dribbble"></a></li>
-            <li><a href=""><img src="footer/twitter.png" alt="twitter"></a></li>
-            <li><a href=""><img src="footer/facebook.png" alt="facebook"></a></li>
-            <li><a href=""><img src="footer/linkedin.png" alt="linkedin"></a></li>
+        <ul>
+            <li><a href="#home"><img src="images/footer/behance.png" alt="Behance social link icon."></a></li>
+            <li><a href="#home"><img src="images/footer/dribbble.png" alt="Dribbble social link icon."></a></li>
+            <li><a href="#home"><img src="images/footer/twitter.png" alt="Twitter social link icon."></a></li>
+            <li><a href="#home"><img src="images/footer/facebook.png" alt="Facebook social link icon."></a></li>
+            <li><a href="#home"><img src="images/footer/linkedin.png" alt="Linkedin social link icon."></a></li>
         </ul>
         <span>Copiright &copy; 2014 Lucid onepage theme</span>
-    </footer>
+    </footer>  
+ 
 </body>
 </html>
