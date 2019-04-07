@@ -5,16 +5,17 @@
 
   ul {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
   
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 2.15rem;
   
     li {
-      max-width: 270px;
-      padding: 0 24px;
       text-align: center;
+    }
+
+    li + li {
+      margin-top: 2rem;
     }
   
     %list-item {
@@ -44,6 +45,40 @@
     .phone {
       @extend %list-item;
       background: $transparent url(images/svgs/Phone.svg) center center no-repeat;
+    }
+
+    @include mq-medium-up {
+      flex-direction: row;
+      flex-flow: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      margin-top: 4rem;
+
+      li {
+        padding: 0 1.5rem;
+        margin-bottom: 2.15rem;
+      }
+
+      li + li {
+        margin-top: 0;
+      }
+    }
+
+    @include mq-medium {
+      margin-bottom: 0;
+
+      li {
+        max-width: 50%;
+        margin-bottom: 2.15rem;
+      }
+    }
+
+    @include mq-large-up {
+      li {
+        max-width: 24%;
+        padding: 0 1.5rem;
+      }
     }
   }
 }

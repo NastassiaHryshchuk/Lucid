@@ -4,14 +4,11 @@
 
   ul {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
 
-    margin-top: 3.3rem;
+    margin-top: 2rem;
 
     li {
-      min-width: 17rem;
-      width: 24%;
       text-align: center;
       border: 1px solid #e0e0e0;
 
@@ -89,6 +86,39 @@
       &:hover .price-content a {
         color: $white;
         background-color: $brand-color;
+      }
+    }
+
+    li + li {
+      margin-top: 2rem;
+    }
+
+    @include mq-medium-up {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin-top: 3.3rem;
+
+      li {
+        margin-bottom: 2.15rem;
+      }
+
+      li + li {
+        margin-top: 0;
+      }
+    }
+
+    @include mq-medium {
+      li {
+        width: 48%;
+      }
+    }
+
+    @include mq-large-up {
+      li {
+        min-width: 16rem;
+        width: 24%;
       }
     }
   }

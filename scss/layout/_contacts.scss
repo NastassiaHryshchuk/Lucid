@@ -9,8 +9,7 @@
 
   ul {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
   
     margin: 2.5% 7.5% 30% 7.5%;
 
@@ -39,19 +38,41 @@
       @extend %list-item;
       background: $transparent url(images/svgs/Envelope.svg) center center no-repeat;
     }
+
+    @include mq-medium {
+      margin-bottom: 5%;
+    }
+
+    @include mq-medium-up {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
 }
 
 form {
-  position: absolute;
-  bottom: 19rem;
-  left: 0;
-  right: 0;
-  margin: auto;
+  text-align: center;
+
+  @include mq-medium-up {
+    margin: auto;
+  }
+
+  @include mq-large-up {
+    position: absolute;
+    bottom: 19rem;
+    left: 0;
+    right: 0;
+  }
 }
 
 button[type="submit"] {
-  float: right;
+  margin-bottom: 1.5rem;
+
+  @include mq-medium-up {
+    float: right;
+    margin-bottom: 0;
+  }
 }
 
 .clearfix:after {
