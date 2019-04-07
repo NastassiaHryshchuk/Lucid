@@ -5,16 +5,17 @@
 
   ul {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
   
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 2.15rem;
   
     li {
-      max-width: 270px;
-      padding: 0 24px;
       text-align: center;
+    }
+
+    li + li {
+      margin-top: 2rem;
     }
   
     %list-item {
@@ -44,6 +45,23 @@
     .phone {
       @extend %list-item;
       background: $transparent url(images/svgs/Phone.svg) center center no-repeat;
+    }
+
+    @include mq-medium-up {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      margin-top: 4rem;
+
+      li {
+        max-width: 24%;
+        padding: 0 1.5rem;
+      }
+
+      li + li {
+        margin-top: 0;
+      }
     }
   }
 }

@@ -30,6 +30,10 @@ $background-light: $white;
 $border-color: $gray;
 $border-price: $gray-light;
 
-
 // Container
 $container-width: 1171px;
+
+// Media
+$screen-small: 320px; // for iPhone 5/SE
+$screen-medium: 760px;
+$screen-large: 1024px;
