@@ -39,6 +39,10 @@
       background: $transparent url(images/svgs/Envelope.svg) center center no-repeat;
     }
 
+    @include mq-medium {
+      margin-bottom: 5%;
+    }
+
     @include mq-medium-up {
       flex-direction: row;
       justify-content: space-between;
@@ -48,20 +52,26 @@
 }
 
 form {
+  text-align: center;
+
   @include mq-medium-up {
+    margin: auto;
+  }
+
+  @include mq-large-up {
     position: absolute;
     bottom: 19rem;
     left: 0;
     right: 0;
-    margin: auto;
   }
 }
 
 button[type="submit"] {
-  float: right;
+  margin-bottom: 1.5rem;
 
   @include mq-medium-up {
-
+    float: right;
+    margin-bottom: 0;
   }
 }
 
@@ -75,6 +85,6 @@ button[type="submit"] {
 
 .form-img {
     width: 100%;
-    min-height: 24.5rem;
+    min-height: 24rem;
     background: $gray-dark url(images/wrappers/Warstwa_15.png) 50% 24% no-repeat;
 }

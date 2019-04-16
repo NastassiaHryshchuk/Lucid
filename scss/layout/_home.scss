@@ -15,16 +15,25 @@
 
   &-content-wrapper {
     flex-basis: 100%;
-    padding: 13.5% 0 9.5% 0;
+    padding: 6.0625rem 0 3rem;
 
     p {
       margin-bottom: 4rem;
       padding-top: 1.2rem;
     }
 
+    @include mq-medium {
+      flex-basis: 100%;
+    }
+
     @include mq-medium-up {
+      padding: 13.5% 8% 9.5% 0;
+    }
+
+    @include mq-large-up {
       flex-basis: 50%;
-      padding-left: 8%;
+      // padding-left: 8%;
+      // padding: 13.5% 0 9.5% 0;
     }
   }
 
@@ -40,6 +49,8 @@
         position: absolute;
         bottom: 0;
         right: -13px;
+        
+        display: block;
         width: 505px;
       }
     }

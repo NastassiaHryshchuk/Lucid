@@ -44,7 +44,7 @@
 }
 
 .testimonials-background-wrapper {
-  padding: 4.2rem 0 2rem 0;
+  padding: 4rem 0 2rem 0;
   background: $gray-deep url(images/wrappers/Warstwa_8.png) 0% 14% no-repeat;
   background-size: cover;  
 }
@@ -82,12 +82,20 @@ blockquote p {
 
   h3 {
     margin-right: auto;
-    padding: 0 0 20px 0;
+    padding: 0 0 1.2rem 0;
 
     @include font(2.25rem, $white, 300, 1.33);
 
     span {
       font-weight: 600;
+    }
+
+    @include mq-medium {
+      font-size: 2rem;
+    }
+
+    @include mq-medium-up {
+      padding: 0;
     }
   }
 }

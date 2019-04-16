@@ -16,12 +16,16 @@
     background-color: $brand-color;
   }
 
-  &:hover {
+  &:hover::after,
+  &:active::after,
+  &:focus::after,
+  &:visited::after  {
     text-decoration: underline;
   }
 
-  &:focus {
-    text-decoration: underline;
+  @include mq-medium-up {
+    display: inline-block;
+    width: 10rem;
   }
 
   @include mq-medium-up {

@@ -1,6 +1,10 @@
 #pricing {
-  padding: 4% 0;
+  padding: 4% 0 4%;
   background-color: $background-light;
+
+  @include mq-medium-up {
+    padding-bottom: 2%;
+  }
 
   ul {
     display: flex;
@@ -49,13 +53,13 @@
         justify-content: space-between;
         align-items: center;
 
-        min-height: 17rem;
+        min-height: 16.7rem;
         padding: 17% 15% 10% 15%;
 
         a {
-          @include font(1.125rem, $brand-color, 600);
+          @include font(0.9rem, $brand-color, 600);
           text-transform: uppercase;
-          padding: 14px 28px;
+          padding: 1rem 2.4rem;
         
           border: 1px solid $border-price;
           border-radius: 3px;
@@ -101,12 +105,24 @@
       margin-top: 3.3rem;
 
       li {
-        min-width: 17rem;
-        width: 24%;
+        margin-bottom: 2.15rem;
       }
 
       li + li {
         margin-top: 0;
+      }
+    }
+
+    @include mq-medium {
+      li {
+        width: 48%;
+      }
+    }
+
+    @include mq-large-up {
+      li {
+        min-width: 16rem;
+        width: 24%;
       }
     }
   }

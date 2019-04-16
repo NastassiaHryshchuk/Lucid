@@ -29,13 +29,16 @@
   &-img {
     img {
       width: 100%;
+
+      @include mq-large-up {
+        width: 507px;
+      }
+
     }
 
     @include mq-medium-up {
       flex-basis: 50%;
       padding-left: 2%;
-
-      width: 510px;
     }
   }
 
@@ -85,7 +88,7 @@
 }
 
 .about-customize {
-  padding: 2rem 0 1rem 0;
+  padding: 2.5rem 0 1rem 0;
   background-color: #f2f2f2;
 
   &-flex {
@@ -100,12 +103,14 @@
   &-img {
     img {
       width: 100%;
+
+      @include mq-large-up {
+        width: 710px;
+      }
     }
     
     @include mq-medium-up {
       flex-basis: 50%;
-
-      width: 710px;
     }
   }
 
