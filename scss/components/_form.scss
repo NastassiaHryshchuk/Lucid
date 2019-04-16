@@ -1,7 +1,19 @@
 form {
-  width: 53%;
-  padding: 4% 6% 3% 4%;
+  width: 100%;
+
   background-color: $gray-deep;
+
+  @include mq-medium-up {
+    padding: 4% 6% 3% 4%;
+  }
+
+  @include mq-medium {
+    width: 73%;
+  }
+
+  @include mq-large-up {
+    width: 53%;
+  }
 }
 
 form input[type="text"],
@@ -17,6 +29,7 @@ form textarea {
 
 .form-inputs {
   display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 12rem;
   margin-bottom: 1.1rem;
@@ -25,22 +38,35 @@ form textarea {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    flex-basis: 50%;
-    padding-right: 1%;
   
     input {
       min-height: 3.2rem;
     }
+
+    @include mq-medium-up {
+      flex-basis: 50%;
+      padding-right: 1%;
+    }
   }
 
   &-right {
-    flex-basis: 50%;
-    padding-left: 2%;
-  
     textarea {
       width: 100%;
-      height: 100%;
+      height: 8rem;
+
+      @include mq-medium-up {
+        height: 100%;
+      }
     }
+
+    @include mq-medium-up {
+      flex-basis: 50%;
+      padding-left: 2%;
+    }
+  }
+
+  @include mq-medium-up {
+    flex-direction: row;
   }
 }
 

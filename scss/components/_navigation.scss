@@ -11,6 +11,7 @@
 }
 
 .logo {
+  position: relative;
   margin-right: auto;
 
   @include font(1.5rem, $header-color, 700, $font-family: $additional-font);
@@ -23,33 +24,138 @@
     @include font(0.5625rem, $text-color, 400, 1.11);
     text-align: left;
   }
+
+  @include mq-medium-up {
+    position: static;
+  }
 }
 
 nav {
+    position: absolute;
+    top: 100%;
+    background: $gray-deep;
+    width: 100%;
+
+    visibility: hidden;
+
+  @include mq-medium-up {
+    position: static;
+    background: transparent;
+    visibility: visible;
+    width: auto;
+  }
+
   /* delete word spacing between inline-blocks */
   font-size: 0;
 
   li {
-    display: inline-block;
+    display: block;
+
+    @include mq-medium-up {
+      display: inline-block;
+    }
   }
 
   li+li {
-    margin-left: 1.45rem;
+    @include mq-medium-up {
+      margin-left: 1.45rem;
+    }
   }
 
   a {
     position: relative;
+
+    display: block;
+    padding: 20px 30px;
   
     @include font(1rem, $link-color, 600);
 
-    &:hover::after {
+    &:hover::after,
+    &:active::after,
+    &:focus::after,
+    &:visited::after {
       position: absolute;
-      top: 1.75rem;
+      top: 100%;
+      left: 0;
       content: "";
       display : block;
       height: 2px;
       width: 100%;
-      background-image: repeating-linear-gradient(to right, $brand-color 0%, $brand-color 46%, transparent 46%, transparent 54%,  $brand-color 54%, $brand-color 100%);
+      background-image: repeating-linear-gradient(to right, $brand-color 0%, $brand-color 100%);
+    
+      @include mq-medium-up {
+        top: 1.75rem;
+        background-image: repeating-linear-gradient(to right, $brand-color 0%, $brand-color 46%, transparent 46%, transparent 54%,  $brand-color 54%, $brand-color 100%);
+      }
+    }
+
+    @include mq-medium-up {
+      display: inline;
+      padding: 0;
+    }
+  }
+}
+
+/* menu burger-icon for mobile menu */
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 28px 20px;
+  position: relative;
+
+  %burger-top-and-bottom-items {
+    background: $burger-color;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+
+  .navicon {
+    background: $burger-color;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+
+    &::before {
+      @extend %burger-top-and-bottom-items;
+      top: 5px;
+    }
+
+    &::after {
+      @extend %burger-top-and-bottom-items;
+      top: -5px;
+    }
+  }
+  
+  @include mq-medium-up {
+    display: none;
+  }
+}
+
+/* menu btn */
+.menu-btn {
+  display: none;
+
+  &:checked ~ nav {
+    visibility: visible;
+    // display: block;
+  }
+
+  &:checked ~ .menu-icon .navicon {
+    background: transparent;
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      top: 0;
     }
   }
 }
